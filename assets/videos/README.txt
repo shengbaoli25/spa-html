@@ -9,12 +9,14 @@ Required filenames:
 04_lego.mp4
 05_two_hole_plug.mp4
 06_board_wipe.mp4
-07_water_hose_90min.mp4        9-minute time-compressed version of the full 90-minute / 450-demo session
+07_water_hose_90min.mp4        9-minute time-compressed version of the full 90-minute / 450-trial session
 08_mortise_tenon_60min.mp4     60-minute / 80-trial continuous stability test
 09_case_01_pi05.mp4
 10_case_01_spa_vla.mp4
 11_case_02_pi05.mp4
 12_case_02_spa_vla.mp4
+13_cable_lego_sorting.mp4
+14_long_horizon_servo_packing.mp4
 
 Encoding: MP4 container, H.264 video, yuv420p, 16:9, 1080p or 720p.
 Audio is optional because the webpage plays videos muted.

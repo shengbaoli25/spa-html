@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="SPA-VLA research project page preview">
-  <title>SPA-VLA | Project Page</title>
+  <meta name="description" content="SPA research project page preview">
+  <title>SPA | Project Page</title>
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
 </head>
@@ -13,10 +13,11 @@
 
   <header class="site-header">
     <nav class="site-nav" aria-label="Primary navigation">
-      <a class="site-name" href="#top">SPA-VLA</a>
+      <a class="site-name" href="#top">SPA</a>
       <div class="site-links">
         <a href="#tasks">Tasks</a>
         <a href="#continuous">Stability Tests</a>
+        <a href="#additional">Additional</a>
         <a href="#model">Model</a>
         <a href="#results">Results</a>
       </div>
@@ -26,7 +27,7 @@
   <main id="main">
     <section class="paper-header" id="top">
       <p class="paper-status">Research project · 2026</p>
-      <h1><span>SPA-VLA:</span> Sensorimotor Predictive Augmentation for Vision-Language-Action Models</h1>
+      <h1><span>SPA:</span> Sensorimotor Predictive Augmentation for Vision-Language-Action Models</h1>
 
       <p class="authors">
         <a href="#">Author One<sup>*</sup></a>,
@@ -64,15 +65,15 @@
           </header>
 
           <figure class="task-card">
-            <figcaption><strong>Three-Way Mortise-and-Tenon Block Assembly</strong><span>600 demonstrations</span></figcaption>
+            <figcaption><strong>Three-Way Interlocking Joint Assembly</strong><span>300 demonstrations</span></figcaption>
             <div class="video-frame">
-              <video autoplay muted loop playsinline preload="metadata" poster="./assets/task-mortise-tenon.png" aria-label="Three-Way Mortise-and-Tenon Block Assembly rollout"><source src="./assets/videos/01_mortise_tenon.mp4" type="video/mp4"></video>
+              <video autoplay muted loop playsinline preload="metadata" poster="./assets/task-mortise-tenon.png" aria-label="Three-Way Interlocking Joint Assembly rollout"><source src="./assets/videos/01_mortise_tenon.mp4" type="video/mp4"></video>
               <span class="media-slot">MP4 slot</span>
             </div>
           </figure>
 
           <figure class="task-card">
-            <figcaption><strong>Water-Hose Insertion</strong><span>600 demonstrations</span></figcaption>
+            <figcaption><strong>Water-Hose Insertion</strong><span>300 demonstrations</span></figcaption>
             <div class="video-frame">
               <video autoplay muted loop playsinline preload="metadata" poster="./assets/task-water-hose.png" aria-label="Water-Hose Insertion rollout"><source src="./assets/videos/02_water_hose.mp4" type="video/mp4"></video>
               <span class="media-slot">MP4 slot</span>
@@ -87,7 +88,7 @@
           </header>
 
           <figure class="task-card">
-            <figcaption><strong>Three-Hole Plug Insertion</strong><span>150 demonstrations</span></figcaption>
+            <figcaption><strong>Three-Hole Plug Insertion</strong><span>200 demonstrations</span></figcaption>
             <div class="video-frame">
               <video autoplay muted loop playsinline preload="metadata" poster="./assets/task-three-hole-plug.png" aria-label="Three-Hole Plug Insertion rollout"><source src="./assets/videos/03_three_hole_plug.mp4" type="video/mp4"></video>
               <span class="media-slot">MP4 slot</span>
@@ -95,7 +96,7 @@
           </figure>
 
           <figure class="task-card">
-            <figcaption><strong>LEGO Assembly</strong><span>100 demonstrations</span></figcaption>
+            <figcaption><strong>LEGO Assembly</strong><span>200 demonstrations</span></figcaption>
             <div class="video-frame">
               <video autoplay muted loop playsinline preload="metadata" poster="./assets/task-lego.png" aria-label="LEGO Assembly rollout"><source src="./assets/videos/04_lego.mp4" type="video/mp4"></video>
               <span class="media-slot">MP4 slot</span>
@@ -136,7 +137,7 @@
         </div>
         <dl class="protocol-stats">
           <div><dt>6</dt><dd>contact-rich tasks</dd></div>
-          <div><dt>1,660</dt><dd>expert demonstrations</dd></div>
+          <div><dt>1,210</dt><dd>expert demonstrations</dd></div>
           <div><dt>20</dt><dd>trials per task</dd></div>
           <div><dt>120</dt><dd>trials per method</dd></div>
         </dl>
@@ -145,14 +146,14 @@
 
     <section class="content-section continuous-section" id="continuous" aria-labelledby="continuous-title">
       <div class="section-heading">
-        <p class="eyebrow">Extended-data stability tests</p>
-        <h2 id="continuous-title">Long-horizon execution after dataset expansion.</h2>
-        <p>These continuous tests were conducted after extending the task-specific datasets beyond the settings used in the six-task main comparison. They are reported separately and are not included in the success-rate averages above.</p>
+        <p class="eyebrow">Long-horizon stability tests</p>
+        <h2 id="continuous-title">Continuous execution beyond the main evaluation.</h2>
+        <p>These tests are reported separately and are not included in the six-task success-rate averages. Water-Hose uses a task-specific dataset extended from 300 to 600 demonstrations; the Interlocking Joint test uses the original 300 demonstrations with no additional training data.</p>
       </div>
 
       <div class="endurance-grid">
         <figure class="endurance-card endurance-card--water">
-          <header><div><span>Expanded dataset · 1,000 demonstrations</span><h3>Water-Hose Insertion</h3></div><strong>9 positions</strong></header>
+          <header><div><span>Expanded dataset · 600 demonstrations</span><h3>Water-Hose Insertion</h3></div><strong>9 positions</strong></header>
           <div class="endurance-video">
             <video autoplay muted loop playsinline preload="metadata" poster="./assets/task-water-hose.png" aria-label="Time-compressed recording of the continuous Water-Hose stability test"><source src="./assets/videos/07_water_hose_90min.mp4" type="video/mp4"></video>
             <span class="media-slot media-slot--light">9-min time-compressed slot</span>
@@ -166,17 +167,45 @@
         </figure>
 
         <figure class="endurance-card endurance-card--mortise">
-          <header><div><span>Expanded dataset · 500 demonstrations</span><h3>Mortise-and-Tenon Assembly</h3></div><strong>Continuous run</strong></header>
+          <header><div><span>Original dataset · no added demonstrations</span><h3>Interlocking Joint Assembly</h3></div><strong>Continuous run</strong></header>
           <div class="endurance-video">
-            <video autoplay muted loop playsinline preload="metadata" poster="./assets/task-mortise-tenon.png" aria-label="Continuous 60-minute Mortise-and-Tenon stability test"><source src="./assets/videos/08_mortise_tenon_60min.mp4" type="video/mp4"></video>
+            <video autoplay muted loop playsinline preload="metadata" poster="./assets/task-mortise-tenon.png" aria-label="Continuous 60-minute Interlocking Joint stability test"><source src="./assets/videos/08_mortise_tenon_60min.mp4" type="video/mp4"></video>
             <span class="media-slot media-slot--light">60-min test video slot</span>
           </div>
-          <figcaption class="endurance-stats" aria-label="Mortise-and-Tenon stability test summary">
+          <figcaption class="endurance-stats" aria-label="Interlocking Joint stability test summary">
             <p><strong>60</strong><span>test minutes</span></p>
             <p><strong>80</strong><span>consecutive trials</span></p>
             <p><strong>1</strong><span>continuous session</span></p>
-            <p><strong>500</strong><span>training demos</span></p>
+            <p><strong>300</strong><span>training demos</span></p>
           </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="content-section additional-section" id="additional" aria-labelledby="additional-title">
+      <div class="section-heading">
+        <p class="eyebrow">Additional evaluations</p>
+        <h2 id="additional-title">Two behaviors beyond the main benchmark.</h2>
+        <p>These supplementary experiments broaden the evaluation beyond the fixed six-task comparison and are reported separately from the success-rate averages.</p>
+      </div>
+
+      <div class="additional-grid">
+        <figure class="additional-card">
+          <header><span>Additional experiment 01</span><h3>Cable &amp; LEGO Sorting</h3></header>
+          <div class="additional-video">
+            <video autoplay muted loop playsinline preload="metadata" aria-label="Cable and LEGO Sorting supplementary rollout"><source src="./assets/videos/13_cable_lego_sorting.mp4" type="video/mp4"></video>
+            <span class="media-slot">MP4 slot</span>
+          </div>
+          <figcaption>Mixed-object sorting with deformable cable and rigid LEGO components.</figcaption>
+        </figure>
+
+        <figure class="additional-card">
+          <header><span>Additional experiment 02</span><h3>Long-Horizon Servo Packing</h3></header>
+          <div class="additional-video">
+            <video autoplay muted loop playsinline preload="metadata" aria-label="Long-Horizon Servo Packing supplementary rollout"><source src="./assets/videos/14_long_horizon_servo_packing.mp4" type="video/mp4"></video>
+            <span class="media-slot">MP4 slot</span>
+          </div>
+          <figcaption>Extended-duration execution of the servo packing workflow.</figcaption>
         </figure>
       </div>
     </section>
@@ -192,22 +221,33 @@
         <img src="./assets/fig-method-overview.png" alt="SPA-VLA model overview">
         <figcaption><span>Figure 1.</span> Sensorimotor predictive learning and hierarchical injection into the VLA action expert.</figcaption>
       </figure>
+
+      <div class="method-explanation" aria-label="SPA-VLA training stages">
+        <article>
+          <span>01</span>
+          <div><h3>Predictive pretraining</h3><p>A multimodal Transformer processes visual tokens together with force/torque, robot-state, and joint-effort histories. A shared decoder reads every retained layer and predicts future force/torque, future joint effort, and terminal joint-state displacement, shaping a hierarchy that captures contact response, actuation load, and motion intent.</p></div>
+        </article>
+        <article>
+          <span>02</span>
+          <div><h3>Depth-aligned action augmentation</h3><p>During action learning, selected Action Expert layers query the corresponding SPA representations through gated cross-attention. Independently learned gates regulate each residual update, injecting progressively integrated physical context while preserving the pretrained action pathway.</p></div>
+        </article>
+      </div>
     </section>
 
     <section class="content-section results-section" id="results" aria-labelledby="main-results-title">
       <div class="section-heading">
         <p class="eyebrow">Quantitative evaluation</p>
         <h2 id="main-results-title">Success across all six tasks.</h2>
-        <p>Success rates are measured over 20 consecutive trials per task. Tasks follow the hard-to-easy order in the experimental setup; Average is the unweighted mean across all six tasks.</p>
+        <p>Success rates are measured over 20 consecutive trials per task. Tasks follow the hard-to-easy order in the experimental setup; Overall reports total successes over 120 trials.</p>
       </div>
 
-      <div class="results-chart-viewport" tabindex="0" aria-label="Scrollable grouped bar chart of task success rates">
+      <div class="results-chart-viewport" tabindex="0" aria-label="Grouped bar chart of task success rates">
         <figure class="results-chart">
           <figcaption>Real-world task success rate (%)</figcaption>
           <div class="chart-legend" aria-label="Methods">
             <span><i class="legend-pi" aria-hidden="true"></i>π<sub>0.5</sub></span>
-            <span><i class="legend-force" aria-hidden="true"></i>ForceVLA-π<sub>0.5</sub></span>
-            <span><i class="legend-force2" aria-hidden="true"></i>ForceVLA2-π<sub>0.5</sub></span>
+            <span><i class="legend-force" aria-hidden="true"></i>ForceVLA</span>
+            <span><i class="legend-force2" aria-hidden="true"></i>ForceVLA2</span>
             <span><i class="legend-spa" aria-hidden="true"></i>SPA-VLA</span>
           </div>
 
@@ -217,34 +257,47 @@
             <div class="chart-plot">
               <div class="chart-gridlines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
               <div class="difficulty-bands" aria-hidden="true">
-                <span class="band-hard">Hard</span><span class="band-medium">Medium</span><span class="band-easy">Easy</span><span class="band-average">Average</span>
+                <span class="band-hard">Hard</span><span class="band-medium">Medium</span><span class="band-easy">Easy</span><span class="band-average">Overall</span>
               </div>
               <div class="chart-groups">
-                <section class="chart-group" aria-label="Mortise-and-Tenon Assembly: π0.5 70%, ForceVLA-π0.5 75%, ForceVLA2-π0.5 75%, SPA-VLA 80%">
-                  <div class="bar-pack"><i class="metric-bar bar-pi" style="--value:70"><b>70</b></i><i class="metric-bar bar-force" style="--value:75"><b>75</b></i><i class="metric-bar bar-force2" style="--value:75"><b>75</b></i><i class="metric-bar bar-spa" style="--value:80"><b>80</b></i></div><h3>Mortise–<br>Tenon</h3>
+                <section class="chart-group" aria-label="Interlocking Joint Assembly: π0.5 55%, ForceVLA-π0.5 70%, ForceVLA2-π0.5 65%, SPA-VLA 90%">
+                  <div class="bar-pack"><i class="metric-bar bar-pi" style="--value:55"><b>55</b></i><i class="metric-bar bar-force" style="--value:70"><b>70</b></i><i class="metric-bar bar-force2" style="--value:65"><b>65</b></i><i class="metric-bar bar-spa" style="--value:90"><b>90</b></i></div><img class="chart-task-image" src="./assets/task-mortise-tenon.png" alt="" loading="lazy"><h3>Interlocking<br>Joint</h3>
                 </section>
-                <section class="chart-group" aria-label="Water-Hose Insertion: π0.5 65%, ForceVLA-π0.5 70%, ForceVLA2-π0.5 80%, SPA-VLA 85%">
-                  <div class="bar-pack"><i class="metric-bar bar-pi" style="--value:65"><b>65</b></i><i class="metric-bar bar-force" style="--value:70"><b>70</b></i><i class="metric-bar bar-force2" style="--value:80"><b>80</b></i><i class="metric-bar bar-spa" style="--value:85"><b>85</b></i></div><h3>Water-<br>Hose</h3>
+                <section class="chart-group" aria-label="Water-Hose Insertion: π0.5 65%, ForceVLA-π0.5 70%, ForceVLA2-π0.5 75%, SPA-VLA 85%">
+                  <div class="bar-pack"><i class="metric-bar bar-pi" style="--value:65"><b>65</b></i><i class="metric-bar bar-force" style="--value:70"><b>70</b></i><i class="metric-bar bar-force2" style="--value:75"><b>75</b></i><i class="metric-bar bar-spa" style="--value:85"><b>85</b></i></div><img class="chart-task-image" src="./assets/task-water-hose.png" alt="" loading="lazy"><h3>Water-<br>Hose</h3>
                 </section>
-                <section class="chart-group" aria-label="Three-Hole Plug Insertion: π0.5 75%, ForceVLA-π0.5 70%, ForceVLA2-π0.5 85%, SPA-VLA 80%">
-                  <div class="bar-pack"><i class="metric-bar bar-pi" style="--value:75"><b>75</b></i><i class="metric-bar bar-force" style="--value:70"><b>70</b></i><i class="metric-bar bar-force2" style="--value:85"><b>85</b></i><i class="metric-bar bar-spa" style="--value:80"><b>80</b></i></div><h3>3-Hole<br>Plug</h3>
+                <section class="chart-group" aria-label="Three-Hole Plug Insertion: π0.5 75%, ForceVLA-π0.5 60%, ForceVLA2-π0.5 85%, SPA-VLA 80%">
+                  <div class="bar-pack"><i class="metric-bar bar-pi" style="--value:75"><b>75</b></i><i class="metric-bar bar-force" style="--value:60"><b>60</b></i><i class="metric-bar bar-force2" style="--value:85"><b>85</b></i><i class="metric-bar bar-spa" style="--value:80"><b>80</b></i></div><img class="chart-task-image" src="./assets/task-three-hole-plug.png" alt="" loading="lazy"><h3>3-Hole<br>Plug</h3>
                 </section>
-                <section class="chart-group" aria-label="LEGO Assembly: π0.5 60%, ForceVLA-π0.5 75%, ForceVLA2-π0.5 70%, SPA-VLA 90%">
-                  <div class="bar-pack"><i class="metric-bar bar-pi" style="--value:60"><b>60</b></i><i class="metric-bar bar-force" style="--value:75"><b>75</b></i><i class="metric-bar bar-force2" style="--value:70"><b>70</b></i><i class="metric-bar bar-spa" style="--value:90"><b>90</b></i></div><h3>LEGO</h3>
+                <section class="chart-group" aria-label="LEGO Assembly: π0.5 65%, ForceVLA-π0.5 70%, ForceVLA2-π0.5 55%, SPA-VLA 90%">
+                  <div class="bar-pack"><i class="metric-bar bar-pi" style="--value:65"><b>65</b></i><i class="metric-bar bar-force" style="--value:70"><b>70</b></i><i class="metric-bar bar-force2" style="--value:55"><b>55</b></i><i class="metric-bar bar-spa" style="--value:90"><b>90</b></i></div><img class="chart-task-image" src="./assets/task-lego.png" alt="" loading="lazy"><h3>LEGO</h3>
                 </section>
-                <section class="chart-group" aria-label="Two-Hole Plug Insertion: π0.5 85%, ForceVLA-π0.5 85%, ForceVLA2-π0.5 80%, SPA-VLA 95%">
-                  <div class="bar-pack"><i class="metric-bar bar-pi" style="--value:85"><b>85</b></i><i class="metric-bar bar-force" style="--value:85"><b>85</b></i><i class="metric-bar bar-force2" style="--value:80"><b>80</b></i><i class="metric-bar bar-spa" style="--value:95"><b>95</b></i></div><h3>2-Hole<br>Plug</h3>
+                <section class="chart-group" aria-label="Two-Hole Plug Insertion: π0.5 65%, ForceVLA-π0.5 75%, ForceVLA2-π0.5 80%, SPA-VLA 95%">
+                  <div class="bar-pack"><i class="metric-bar bar-pi" style="--value:65"><b>65</b></i><i class="metric-bar bar-force" style="--value:75"><b>75</b></i><i class="metric-bar bar-force2" style="--value:80"><b>80</b></i><i class="metric-bar bar-spa" style="--value:95"><b>95</b></i></div><img class="chart-task-image" src="./assets/task-two-hole-plug.png" alt="" loading="lazy"><h3>2-Hole<br>Plug</h3>
                 </section>
-                <section class="chart-group" aria-label="Board Wiping: π0.5 70%, ForceVLA-π0.5 90%, ForceVLA2-π0.5 90%, SPA-VLA 100%">
-                  <div class="bar-pack"><i class="metric-bar bar-pi" style="--value:70"><b>70</b></i><i class="metric-bar bar-force" style="--value:90"><b>90</b></i><i class="metric-bar bar-force2" style="--value:90"><b>90</b></i><i class="metric-bar bar-spa" style="--value:100"><b>100</b></i></div><h3>Board<br>Wipe</h3>
+                <section class="chart-group" aria-label="Board Wiping: π0.5 90%, ForceVLA-π0.5 80%, ForceVLA2-π0.5 85%, SPA-VLA 100%">
+                  <div class="bar-pack"><i class="metric-bar bar-pi" style="--value:90"><b>90</b></i><i class="metric-bar bar-force" style="--value:80"><b>80</b></i><i class="metric-bar bar-force2" style="--value:85"><b>85</b></i><i class="metric-bar bar-spa" style="--value:100"><b>100</b></i></div><img class="chart-task-image" src="./assets/task-board-wipe.png" alt="" loading="lazy"><h3>Board<br>Wipe</h3>
                 </section>
-                <section class="chart-group chart-group--average" aria-label="Six-task average: π0.5 70.8%, ForceVLA-π0.5 77.5%, ForceVLA2-π0.5 80.0%, SPA-VLA 88.3%">
-                  <div class="bar-pack"><i class="metric-bar bar-pi" style="--value:70.8"><b>70.8</b></i><i class="metric-bar bar-force" style="--value:77.5"><b>77.5</b></i><i class="metric-bar bar-force2" style="--value:80"><b>80.0</b></i><i class="metric-bar bar-spa" style="--value:88.3"><b>88.3</b></i></div><h3>Average</h3>
+                <section class="chart-group chart-group--average" aria-label="Overall success rate: π0.5 69.2%, ForceVLA-π0.5 70.8%, ForceVLA2-π0.5 74.2%, SPA-VLA 90.0%">
+                  <div class="bar-pack"><i class="metric-bar bar-pi" style="--value:69.2"><b>69.2</b></i><i class="metric-bar bar-force" style="--value:70.8"><b>70.8</b></i><i class="metric-bar bar-force2" style="--value:74.2"><b>74.2</b></i><i class="metric-bar bar-spa" style="--value:90"><b>90.0</b></i></div><div class="chart-overall-total" aria-hidden="true"><strong>108</strong><span>/ 120</span></div><h3>Overall</h3>
                 </section>
               </div>
             </div>
           </div>
         </figure>
+      </div>
+
+      <div class="results-analysis">
+        <div class="results-takeaway">
+          <span>Primary result</span>
+          <strong>90.0%</strong>
+          <small>108 / 120 successful trials</small>
+        </div>
+        <div class="results-copy">
+          <h3>Predictive sensorimotor augmentation improves performance across difficulty levels.</h3>
+          <p>Under the same backbone and evaluation protocol, SPA-VLA exceeds the strongest overall baseline, ForceVLA2-π<sub>0.5</sub>, by <strong>15.8 percentage points</strong>. It achieves the highest success rate on five of the six tasks, including 90% on Interlocking Joint and LEGO Assembly, 95% on Two-Hole Plug Insertion, and 100% on Board Wiping.</p>
+          <p>The gains remain consistent from hard tasks (87.5% mean) to medium (85.0%) and easy tasks (97.5%). Three-Hole Plug Insertion is the only task not led by SPA-VLA, where ForceVLA2-π<sub>0.5</sub> reaches 85% compared with 80% for SPA-VLA.</p>
+        </div>
       </div>
     </section>
 
@@ -252,13 +305,23 @@
       <div class="section-heading">
         <p class="eyebrow">Ablation studies</p>
         <h2 id="ablation-title">Where the predictive hierarchy matters.</h2>
-        <p>We ablate hierarchical sensorimotor fusion and Stage-1 predictive pretraining on Water-Hose Insertion and Two-Hole Plug Insertion. Each bar reports successes over 20 consecutive trials.</p>
+        <p>Controlled variants isolate predictive pretraining, the layer-wise representation hierarchy, and depth-aligned integration on Water-Hose Insertion and Two-Hole Plug Insertion.</p>
       </div>
 
-      <figure class="wide-figure ablation-figure">
-        <img src="./assets/fig-ablation-results.jpg" alt="Ablation results on Water-Hose Insertion and Two-Hole Plug Insertion">
-        <figcaption><span>Figure 2.</span> Full SPA-VLA reaches 17/20 on Water-Hose Insertion and 19/20 on Two-Hole Plug Insertion.</figcaption>
-      </figure>
+      <div class="ablation-table-wrap">
+        <table class="ablation-table">
+          <caption><span>Table 1.</span> Successes over 20 trials per task; Average is the mean success rate across both tasks.</caption>
+          <thead>
+            <tr><th>Variant</th><th>Water-Hose<br>Insertion</th><th>Two-Hole Plug<br>Insertion</th><th>Average</th></tr>
+          </thead>
+          <tbody>
+            <tr><th>Shared Deepest Representation</th><td><strong>14/20</strong><span>70%</span></td><td><strong>16/20</strong><span>80%</span></td><td>75.0%</td></tr>
+            <tr><th>Output-Level Conditioning</th><td><strong>13/20</strong><span>65%</span></td><td><strong>17/20</strong><span>85%</span></td><td>75.0%</td></tr>
+            <tr><th>w/o Stage-1 Pretraining</th><td><strong>16/20</strong><span>80%</span></td><td><strong>16/20</strong><span>80%</span></td><td>80.0%</td></tr>
+            <tr class="ablation-ours"><th>SPA-VLA</th><td><strong>17/20</strong><span>85%</span></td><td><strong>19/20</strong><span>95%</span></td><td>90.0%</td></tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
     <section class="content-section qualitative-section" id="qualitative" aria-labelledby="qualitative-title">
@@ -292,7 +355,7 @@
 
       <figure class="wide-figure wide-figure--prediction">
         <img src="./assets/fig-prediction-trajectories.png" alt="Predicted and measured force, torque, and joint-effort trajectories">
-        <figcaption><span>Figure 3.</span> Ground-truth and predicted sensorimotor trajectories on representative contact-rich tasks.</figcaption>
+        <figcaption><span>Figure 2.</span> Ground-truth and predicted sensorimotor trajectories on representative contact-rich tasks.</figcaption>
       </figure>
     </section>
 
@@ -303,8 +366,8 @@
         <p>Author, venue, paper, code, and model links will be updated when the public release information is confirmed.</p>
       </div>
       <div class="citation-box">
-        <pre id="bibtex"><code>@article{spa_vla_2026,
-  title   = {SPA-VLA: Sensorimotor Predictive Augmentation
+        <pre id="bibtex"><code>@article{spa_2026,
+  title   = {SPA: Sensorimotor Predictive Augmentation
              for Vision-Language-Action Models},
   author  = {Anonymous Authors},
   journal = {Under Review},
@@ -316,7 +379,7 @@
   </main>
 
   <footer>
-    <a href="#top">SPA-VLA</a>
+    <a href="#top">SPA</a>
     <p>Project page preview · 2026</p>
   </footer>
 
