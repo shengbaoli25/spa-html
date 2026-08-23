@@ -1,0 +1,28 @@
+Drop the final MP4/H.264 files directly into this directory.
+Do not create empty placeholder MP4 files; this README keeps the directory in Git.
+
+Required filenames:
+
+01_mortise_tenon.mp4
+02_water_hose.mp4
+03_three_hole_plug.mp4
+04_lego.mp4
+05_two_hole_plug.mp4
+06_board_wipe.mp4
+07_water_hose_90min.mp4        9-minute time-compressed version of the full 90-minute / 450-demo session
+08_mortise_tenon_60min.mp4     60-minute / 80-trial continuous stability test
+09_case_01_pi05.mp4
+10_case_01_spa_vla.mp4
+11_case_02_pi05.mp4
+12_case_02_spa_vla.mp4
+
+Encoding: MP4 container, H.264 video, yuv420p, 16:9, 1080p or 720p.
+Audio is optional because the webpage plays videos muted.
+
+Use matched framing, playback speed, and duration within each qualitative
+comparison pair. After the files are added, reload the webpage; no HTML
+filename changes are needed.
+
+The MP4 files are ignored by Git by default because the source videos are
+currently internal. Do not force-add or upload them until public release is
+approved. Use external object storage/CDN URLs for large release videos.
