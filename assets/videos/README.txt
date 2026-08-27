@@ -11,21 +11,15 @@ Required filenames:
 06_board_wipe.mp4
 07_water_hose_90min.mp4        9-minute time-compressed version of the full 90-minute / 450-trial session
 08_mortise_tenon_60min.mp4     60-minute / 80-trial continuous stability test
-09_case_01_pi05.mp4
-10_case_01_spa_vla.mp4
-11_case_02_pi05.mp4
-12_case_02_spa_vla.mp4
-13_cable_lego_sorting.mp4
-14_long_horizon_servo_packing.mp4
+09_cable_lego_sorting.mp4
+10_long_horizon_servo_packing.mp4
 
 Encoding: MP4 container, H.264 video, yuv420p.
-Use square 1:1 video (1080x1080 or 720x720) for files 01-06 and 09-12.
-Use 16:9 video (1920x1080 or 1280x720) for files 07-08 and 13-14.
+Use square 1:1 video (1080x1080 or 720x720) for files 01-06.
+Use 16:9 video (1920x1080 or 1280x720) for files 07-10.
 Audio is optional because the webpage plays videos muted.
 
-Use matched framing, playback speed, and duration within each qualitative
-comparison pair. After the files are added, reload the webpage; no HTML
-filename changes are needed.
+After the files are added, reload the webpage; no HTML filename changes are needed.
 
 The MP4 files are ignored by Git by default because the source videos are
 currently internal. Do not force-add or upload them until public release is
