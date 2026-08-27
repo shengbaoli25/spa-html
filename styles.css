@@ -200,7 +200,7 @@ a { color: inherit; }
 }
 .task-card { min-width: 0; margin: 0 0 27px; color: var(--ink); }
 .video-frame {
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 1 / 1;
   position: relative;
   overflow: hidden;
   background: #deded8;
@@ -590,7 +590,7 @@ a { color: inherit; }
 .comparison-row > header span { color: var(--muted); font: 8px "Courier New", monospace; text-transform: uppercase; }
 .comparison-row > header h3 { margin: 9px 0 0; font: 18px/1.25 Georgia, "Times New Roman", serif; font-weight: 400; }
 .comparison-row figure { min-width: 0; margin: 0; }
-.comparison-frame { aspect-ratio: 16 / 10; position: relative; overflow: hidden; background: #ecece8; border-radius: 4px; }
+.comparison-frame { aspect-ratio: 1 / 1; position: relative; overflow: hidden; background: #ecece8; border-radius: 4px; }
 .comparison-frame video { height: 100%; object-fit: cover; }
 
 .citation { text-align: center; }

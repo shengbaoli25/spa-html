@@ -4,11 +4,11 @@ This independent project-page preview uses an OpenVLA-style academic structure
 with a restrained visual language inspired by Physical Intelligence. The
 original template under `../site/` is unchanged.
 
-The task showcase is organized as a desktop 3-column by 2-row video wall. Each
-column represents one difficulty level (hard, medium, or easy). The page also
-contains two extended-data stability tests, two supplementary experiments, a
-six-task grouped result chart, the ablation table, and two paired qualitative
-comparison slots. Expected video filenames are listed in
+The task showcase is organized as a desktop 3-column by 2-row square video
+wall. Each column represents one difficulty level (hard, medium, or easy). The
+page also contains two 16:9 stability tests, two 16:9 supplementary experiments,
+a six-task grouped result chart, the ablation table, and two paired square
+qualitative comparison slots. Expected video filenames and aspect ratios are listed in
 `assets/videos/README.txt`.
 
 Run `./serve.ps1` and open

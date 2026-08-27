@@ -18,7 +18,9 @@ Required filenames:
 13_cable_lego_sorting.mp4
 14_long_horizon_servo_packing.mp4
 
-Encoding: MP4 container, H.264 video, yuv420p, 16:9, 1080p or 720p.
+Encoding: MP4 container, H.264 video, yuv420p.
+Use square 1:1 video (1080x1080 or 720x720) for files 01-06 and 09-12.
+Use 16:9 video (1920x1080 or 1280x720) for files 07-08 and 13-14.
 Audio is optional because the webpage plays videos muted.
 
 Use matched framing, playback speed, and duration within each qualitative
