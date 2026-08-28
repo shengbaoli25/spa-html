@@ -301,6 +301,42 @@
       </div>
     </section>
 
+    <section class="content-section qualitative-section" id="qualitative" aria-labelledby="qualitative-title">
+      <div class="section-heading">
+        <p class="eyebrow">Matched qualitative comparison</p>
+        <h2 id="qualitative-title">Maintaining the insertion axis under contact.</h2>
+        <p>Both policies begin the Three-Hole Plug task with closely matched plug-to-socket alignment. As contact loads build, π<sub>0.5</sub> develops lateral drift and ends off-axis. SPA-VLA preserves axial alignment and directs the applied force vertically downward, completing the insertion.</p>
+      </div>
+
+      <div class="qualitative-grid">
+        <figure class="qualitative-item qualitative-item--baseline">
+          <header>
+            <div><span>π<sub>0.5</sub> baseline</span><h3>Three-Hole Plug Insertion</h3></div>
+            <strong>Failure · Lateral drift</strong>
+          </header>
+          <div class="qualitative-video">
+            <video autoplay muted loop playsinline preload="metadata" poster="./assets/task-three-hole-plug.png" aria-label="π0.5 Three-Hole Plug insertion rollout with lateral drift"><source src="./assets/videos/11_three_hole_plug_pi05.mp4" type="video/mp4"></video>
+            <span class="media-slot">π0.5 MP4 slot</span>
+          </div>
+          <figcaption>Initial alignment is comparable, but lateral displacement grows during contact and the plug moves away from the insertion axis.</figcaption>
+        </figure>
+
+        <figure class="qualitative-item qualitative-item--ours">
+          <header>
+            <div><span>SPA-VLA · Ours</span><h3>Three-Hole Plug Insertion</h3></div>
+            <strong>Success · Vertical insertion</strong>
+          </header>
+          <div class="qualitative-video">
+            <video autoplay muted loop playsinline preload="metadata" poster="./assets/task-three-hole-plug.png" aria-label="SPA-VLA Three-Hole Plug rollout with vertical insertion"><source src="./assets/videos/12_three_hole_plug_spa_vla.mp4" type="video/mp4"></video>
+            <span class="media-slot">SPA-VLA MP4 slot</span>
+          </div>
+          <figcaption>SPA-VLA maintains axial alignment, applies a stable downward force, and completes a clean insertion.</figcaption>
+        </figure>
+      </div>
+
+      <p class="qualitative-note">Representative paired rollouts with comparable initial alignment. This example illustrates contact behavior and is not used to estimate the overall success rate.</p>
+    </section>
+
     <section class="content-section ablation-section" id="ablation" aria-labelledby="ablation-title">
       <div class="section-heading">
         <p class="eyebrow">Ablation studies</p>

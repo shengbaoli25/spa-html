@@ -277,7 +277,8 @@ a { color: inherit; }
 
 .video-frame.is-playing .media-slot,
 .endurance-video.is-playing .media-slot,
-.additional-video.is-playing .media-slot { display: none; }
+.additional-video.is-playing .media-slot,
+.qualitative-video.is-playing .media-slot { display: none; }
 
 .content-section {
   width: min(var(--content), calc(100% - 48px));
@@ -534,6 +535,20 @@ a { color: inherit; }
 .results-copy p { margin: 0 0 11px; color: var(--muted); font-size: 14px; line-height: 1.75; }
 .results-copy p strong { color: var(--ink); font-weight: 600; }
 
+.qualitative-section { width: min(1120px, calc(100% - 48px)); }
+.qualitative-grid { margin-top: 48px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.qualitative-item { min-width: 0; margin: 0; }
+.qualitative-item > header { min-height: 91px; padding: 16px 2px 15px; display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; border-top: 2px solid var(--muted); }
+.qualitative-item--ours > header { border-top-color: var(--accent); }
+.qualitative-item > header span { color: var(--muted); font: 9px/1.35 "Courier New", monospace; text-transform: uppercase; }
+.qualitative-item > header h3 { margin: 9px 0 0; font: 23px/1.2 Georgia, "Times New Roman", serif; font-weight: 400; }
+.qualitative-item > header strong { flex: 0 0 auto; margin-top: 2px; padding: 7px 9px; color: var(--muted); border: 1px solid var(--line); font: 8px/1 "Courier New", monospace; font-weight: 400; text-transform: uppercase; }
+.qualitative-item--ours > header strong { color: var(--accent); border-color: var(--accent); }
+.qualitative-video { aspect-ratio: 1 / 1; position: relative; overflow: hidden; background: #e8e9e6; }
+.qualitative-video video { width: 100%; height: 100%; object-fit: cover; filter: saturate(.86) contrast(1.03); }
+.qualitative-item figcaption { min-height: 70px; padding: 15px 2px 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.qualitative-note { margin: 34px 0 0; padding-top: 16px; color: var(--muted); border-top: 1px solid var(--line); font: 9px/1.6 "Courier New", monospace; text-transform: uppercase; }
+
 .ablation-table-wrap { margin-top: 46px; overflow-x: auto; border: 1px solid var(--line); border-radius: 5px; }
 .ablation-table { width: 100%; min-width: 720px; border-collapse: collapse; background: var(--white); }
 .ablation-table caption {
@@ -619,6 +634,7 @@ footer p { margin: 0; color: var(--muted); font: 9px "Courier New", monospace; t
   .protocol-stats { grid-template-columns: repeat(2, 1fr); gap: 28px 18px; }
   .endurance-grid { grid-template-columns: 1fr; gap: 48px; }
   .additional-grid { grid-template-columns: 1fr; gap: 22px; }
+  .qualitative-grid { grid-template-columns: 1fr; gap: 44px; }
   .method-explanation { grid-template-columns: 1fr; gap: 28px; }
 }
 
@@ -660,6 +676,10 @@ footer p { margin: 0; color: var(--muted); font: 9px "Courier New", monospace; t
   .endurance-stats p:nth-child(odd) { border-left: 0; }
   .endurance-stats p:nth-child(n + 3) { border-top: 1px solid var(--soft-line); }
   .wide-figure { margin-top: 38px; padding: 9px 9px 0; }
+  .qualitative-grid { margin-top: 38px; }
+  .qualitative-item > header { min-height: 0; display: block; }
+  .qualitative-item > header strong { display: inline-block; margin-top: 13px; }
+  .qualitative-item figcaption { min-height: 0; }
   .ablation-table-wrap { margin-top: 36px; }
   .results-chart-viewport { margin-top: 34px; }
   .results-chart { padding: 12px 8px 16px; }

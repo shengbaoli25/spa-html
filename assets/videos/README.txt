@@ -13,13 +13,17 @@ Required filenames:
 08_mortise_tenon_60min.mp4     60-minute / 80-trial continuous stability test
 09_cable_lego_sorting.mp4
 10_long_horizon_servo_packing.mp4
+11_three_hole_plug_pi05.mp4    matched π0.5 rollout with lateral drift
+12_three_hole_plug_spa_vla.mp4 matched SPA-VLA rollout with vertical insertion
 
 Encoding: MP4 container, H.264 video, yuv420p.
-Use square 1:1 video (1080x1080 or 720x720) for files 01-06.
+Use square 1:1 video (1080x1080 or 720x720) for files 01-06 and 11-12.
 Use 16:9 video (1920x1080 or 1280x720) for files 07-10.
 Audio is optional because the webpage plays videos muted.
 
-After the files are added, reload the webpage; no HTML filename changes are needed.
+Use matched framing, playback speed, and duration for files 11-12. Their initial
+plug-to-socket alignment should be closely comparable. After the files are added,
+reload the webpage; no HTML filename changes are needed.
 
 The MP4 files are ignored by Git by default because the source videos are
 currently internal. Do not force-add or upload them until public release is

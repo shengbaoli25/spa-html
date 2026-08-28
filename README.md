@@ -7,7 +7,7 @@ original template under `../site/` is unchanged.
 The task showcase is organized as a desktop 3-column by 2-row square video
 wall. Each column represents one difficulty level (hard, medium, or easy). The
 page also contains two 16:9 stability tests, two 16:9 supplementary experiments,
-a six-task grouped result chart, and the ablation table. Expected video filenames and aspect ratios are listed in
+a six-task grouped result chart, one paired Three-Hole Plug comparison, and the ablation table. Expected video filenames and aspect ratios are listed in
 `assets/videos/README.txt`.
 
 Run `./serve.ps1` and open
