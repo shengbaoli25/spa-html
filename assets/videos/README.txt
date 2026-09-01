@@ -14,7 +14,7 @@ Required filenames:
 09_cable_lego_sorting.mp4
 10_long_horizon_servo_packing.mp4
 11_three_hole_plug_pi05.mp4    matched π0.5 rollout with lateral drift
-12_three_hole_plug_spa_vla.mp4 matched SPA-VLA rollout with vertical insertion
+12_three_hole_plug_spa_vla.mp4 matched PSA-VLA rollout with vertical insertion
 
 Encoding: MP4 container, H.264 video, yuv420p.
 Use square 1:1 video (1080x1080 or 720x720) for files 01-06 and 11-12.

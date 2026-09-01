@@ -1,4 +1,4 @@
-# SPA Experiment Preview
+# PSA Experiment Preview
 
 This independent project-page preview uses an OpenVLA-style academic structure
 with a restrained visual language inspired by Physical Intelligence. The

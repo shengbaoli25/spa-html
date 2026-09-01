@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="SPA research project page preview">
-  <title>SPA | Project Page</title>
+  <meta name="description" content="PSA research project page preview">
+  <title>PSA | Project Page</title>
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
 </head>
@@ -13,7 +13,7 @@
 
   <header class="site-header">
     <nav class="site-nav" aria-label="Primary navigation">
-      <a class="site-name" href="#top">SPA</a>
+      <a class="site-name" href="#top">PSA</a>
       <div class="site-links">
         <a href="#tasks">Tasks</a>
         <a href="#continuous">Stability Tests</a>
@@ -27,7 +27,7 @@
   <main id="main">
     <section class="paper-header" id="top">
       <p class="paper-status">Research project · 2026</p>
-      <h1><span>SPA:</span> Sensorimotor Predictive Augmentation for Vision-Language-Action Models</h1>
+      <h1><span>PSA:</span> Predictive Sensorimotor Alignment for Contact-Rich Manipulation</h1>
 
       <p class="authors">
         <a href="#">Shengbao Li<sup>*</sup></a>,
@@ -52,14 +52,14 @@
 
     <section class="intro" aria-labelledby="intro-title">
       <h2 id="intro-title">A predictive sensorimotor module gives a vision-language-action policy explicit physical context for contact-rich manipulation.</h2>
-      <p>SPA-VLA augments a π<sub>0.5</sub>-style policy with a six-layer multimodal Transformer trained to anticipate future force/torque, joint effort, and terminal joint-state displacement. Its hierarchical features are injected throughout the action expert to support precise interaction under contact.</p>
+      <p>PSA-VLA augments a π<sub>0.5</sub>-style policy with a six-layer multimodal Transformer trained to anticipate future force/torque, joint effort, and terminal joint-state displacement. Its hierarchical features are injected throughout the action expert to support precise interaction under contact.</p>
     </section>
 
     <section class="rollout-showcase" id="tasks" aria-labelledby="tasks-title">
       <div class="section-heading section-heading--wide">
         <p class="eyebrow">Real-world task suite</p>
         <h2 id="tasks-title">Six tasks across three levels of contact difficulty.</h2>
-        <p>The desktop layout reads by column: hard, medium, and easy. Each slot is reserved for a short, muted rollout from the corresponding SPA-VLA evaluation.</p>
+        <p>The desktop layout reads by column: hard, medium, and easy. Each slot is reserved for a short, muted rollout from the corresponding PSA-VLA evaluation.</p>
       </div>
 
       <div class="difficulty-grid">
@@ -218,23 +218,23 @@
     <section class="content-section model-section" id="model">
       <div class="section-heading">
         <p class="eyebrow">Method</p>
-        <h2>The SPA-VLA Model</h2>
-        <p>SPA receives multiview visual tokens, force/torque history, robot state, and joint-effort history. Predictive pretraining turns these signals into shallow, middle, and deep physical representations that condition six levels of the action expert.</p>
+        <h2>The PSA-VLA Model</h2>
+        <p>PSA receives multiview visual tokens, force/torque history, robot state, and joint-effort history. Predictive pretraining turns these signals into shallow, middle, and deep physical representations that condition six levels of the action expert.</p>
       </div>
 
       <figure class="wide-figure">
-        <img src="./assets/fig-method-overview.png" alt="SPA-VLA model overview">
+        <img src="./assets/fig-method-overview.png" alt="PSA-VLA model overview">
         <figcaption><span>Figure 1.</span> Sensorimotor predictive learning and hierarchical injection into the VLA action expert.</figcaption>
       </figure>
 
-      <div class="method-explanation" aria-label="SPA-VLA training stages">
+      <div class="method-explanation" aria-label="PSA-VLA training stages">
         <article>
           <span>01</span>
           <div><h3>Predictive pretraining</h3><p>A multimodal Transformer processes visual tokens together with force/torque, robot-state, and joint-effort histories. A shared decoder reads every retained layer and predicts future force/torque, future joint effort, and terminal joint-state displacement, shaping a hierarchy that captures contact response, actuation load, and motion intent.</p></div>
         </article>
         <article>
           <span>02</span>
-          <div><h3>Depth-aligned action augmentation</h3><p>During action learning, selected Action Expert layers query the corresponding SPA representations through gated cross-attention. Independently learned gates regulate each residual update, injecting progressively integrated physical context while preserving the pretrained action pathway.</p></div>
+          <div><h3>Depth-aligned action augmentation</h3><p>During action learning, selected Action Expert layers query the corresponding PSA representations through gated cross-attention. Independently learned gates regulate each residual update, injecting progressively integrated physical context while preserving the pretrained action pathway.</p></div>
         </article>
       </div>
     </section>
@@ -253,7 +253,7 @@
             <span><i class="legend-pi" aria-hidden="true"></i>π<sub>0.5</sub></span>
             <span><i class="legend-force" aria-hidden="true"></i>ForceVLA</span>
             <span><i class="legend-force2" aria-hidden="true"></i>ForceVLA2</span>
-            <span><i class="legend-spa" aria-hidden="true"></i>SPA-VLA</span>
+            <span><i class="legend-spa" aria-hidden="true"></i>PSA-VLA</span>
           </div>
 
           <div class="chart-body">
@@ -265,25 +265,25 @@
                 <span class="band-hard">Hard</span><span class="band-medium">Medium</span><span class="band-easy">Easy</span><span class="band-average">Overall</span>
               </div>
               <div class="chart-groups">
-                <section class="chart-group" aria-label="Interlocking Joint Assembly: π0.5 45%, ForceVLA-π0.5 60%, ForceVLA2-π0.5 65%, SPA-VLA 90%">
+                <section class="chart-group" aria-label="Interlocking Joint Assembly: π0.5 45%, ForceVLA-π0.5 60%, ForceVLA2-π0.5 65%, PSA-VLA 90%">
                   <div class="bar-pack"><i class="metric-bar bar-pi" style="--value:45"><b>45</b></i><i class="metric-bar bar-force" style="--value:60"><b>60</b></i><i class="metric-bar bar-force2" style="--value:65"><b>65</b></i><i class="metric-bar bar-spa" style="--value:90"><b>90</b></i></div><img class="chart-task-image" src="./assets/task-mortise-tenon.png" alt="" loading="lazy"><h3>Interlocking<br>Joint</h3>
                 </section>
-                <section class="chart-group" aria-label="Water-Hose Insertion: π0.5 65%, ForceVLA-π0.5 70%, ForceVLA2-π0.5 75%, SPA-VLA 95%">
+                <section class="chart-group" aria-label="Water-Hose Insertion: π0.5 65%, ForceVLA-π0.5 70%, ForceVLA2-π0.5 75%, PSA-VLA 95%">
                   <div class="bar-pack"><i class="metric-bar bar-pi" style="--value:65"><b>65</b></i><i class="metric-bar bar-force" style="--value:70"><b>70</b></i><i class="metric-bar bar-force2" style="--value:75"><b>75</b></i><i class="metric-bar bar-spa" style="--value:95"><b>95</b></i></div><img class="chart-task-image" src="./assets/task-water-hose.png" alt="" loading="lazy"><h3>Water-<br>Hose</h3>
                 </section>
-                <section class="chart-group" aria-label="Three-Hole Plug Insertion: π0.5 60%, ForceVLA-π0.5 60%, ForceVLA2-π0.5 85%, SPA-VLA 80%">
+                <section class="chart-group" aria-label="Three-Hole Plug Insertion: π0.5 60%, ForceVLA-π0.5 60%, ForceVLA2-π0.5 85%, PSA-VLA 80%">
                   <div class="bar-pack"><i class="metric-bar bar-pi" style="--value:60"><b>60</b></i><i class="metric-bar bar-force" style="--value:60"><b>60</b></i><i class="metric-bar bar-force2" style="--value:85"><b>85</b></i><i class="metric-bar bar-spa" style="--value:80"><b>80</b></i></div><img class="chart-task-image" src="./assets/task-three-hole-plug.png" alt="" loading="lazy"><h3>3-Hole<br>Plug</h3>
                 </section>
-                <section class="chart-group" aria-label="LEGO Assembly: π0.5 65%, ForceVLA-π0.5 70%, ForceVLA2-π0.5 55%, SPA-VLA 90%">
+                <section class="chart-group" aria-label="LEGO Assembly: π0.5 65%, ForceVLA-π0.5 70%, ForceVLA2-π0.5 55%, PSA-VLA 90%">
                   <div class="bar-pack"><i class="metric-bar bar-pi" style="--value:65"><b>65</b></i><i class="metric-bar bar-force" style="--value:70"><b>70</b></i><i class="metric-bar bar-force2" style="--value:55"><b>55</b></i><i class="metric-bar bar-spa" style="--value:90"><b>90</b></i></div><img class="chart-task-image" src="./assets/task-lego.png" alt="" loading="lazy"><h3>LEGO</h3>
                 </section>
-                <section class="chart-group" aria-label="Two-Hole Plug Insertion: π0.5 65%, ForceVLA-π0.5 75%, ForceVLA2-π0.5 80%, SPA-VLA 95%">
+                <section class="chart-group" aria-label="Two-Hole Plug Insertion: π0.5 65%, ForceVLA-π0.5 75%, ForceVLA2-π0.5 80%, PSA-VLA 95%">
                   <div class="bar-pack"><i class="metric-bar bar-pi" style="--value:65"><b>65</b></i><i class="metric-bar bar-force" style="--value:75"><b>75</b></i><i class="metric-bar bar-force2" style="--value:80"><b>80</b></i><i class="metric-bar bar-spa" style="--value:95"><b>95</b></i></div><img class="chart-task-image" src="./assets/task-two-hole-plug.png" alt="" loading="lazy"><h3>2-Hole<br>Plug</h3>
                 </section>
-                <section class="chart-group" aria-label="Board Wiping: π0.5 70%, ForceVLA-π0.5 80%, ForceVLA2-π0.5 75%, SPA-VLA 100%">
+                <section class="chart-group" aria-label="Board Wiping: π0.5 70%, ForceVLA-π0.5 80%, ForceVLA2-π0.5 75%, PSA-VLA 100%">
                   <div class="bar-pack"><i class="metric-bar bar-pi" style="--value:70"><b>70</b></i><i class="metric-bar bar-force" style="--value:80"><b>80</b></i><i class="metric-bar bar-force2" style="--value:75"><b>75</b></i><i class="metric-bar bar-spa" style="--value:100"><b>100</b></i></div><img class="chart-task-image" src="./assets/task-board-wipe.png" alt="" loading="lazy"><h3>Board<br>Wipe</h3>
                 </section>
-                <section class="chart-group chart-group--average" aria-label="Overall success rate: π0.5 61.7%, ForceVLA-π0.5 69.2%, ForceVLA2-π0.5 72.5%, SPA-VLA 91.7%">
+                <section class="chart-group chart-group--average" aria-label="Overall success rate: π0.5 61.7%, ForceVLA-π0.5 69.2%, ForceVLA2-π0.5 72.5%, PSA-VLA 91.7%">
                   <div class="bar-pack"><i class="metric-bar bar-pi" style="--value:61.7"><b>61.7</b></i><i class="metric-bar bar-force" style="--value:69.2"><b>69.2</b></i><i class="metric-bar bar-force2" style="--value:72.5"><b>72.5</b></i><i class="metric-bar bar-spa" style="--value:91.7"><b>91.7</b></i></div><div class="chart-overall-total" aria-hidden="true"><strong>110</strong><span>/ 120</span></div><h3>Overall</h3>
                 </section>
               </div>
@@ -300,8 +300,8 @@
         </div>
         <div class="results-copy">
           <h3>Predictive sensorimotor augmentation improves performance across difficulty levels.</h3>
-          <p>Under the same backbone and evaluation protocol, SPA-VLA reaches 110/120 successful trials, compared with 74/120 for π<sub>0.5</sub>, 83/120 for ForceVLA-π<sub>0.5</sub>, and 87/120 for ForceVLA2-π<sub>0.5</sub>. These correspond to gains of <strong>30.0, 22.5, and 19.2 percentage points</strong>, respectively. SPA-VLA achieves the highest success rate on five of the six tasks.</p>
-          <p>The gains remain consistent from hard tasks (92.5% mean) to medium (85.0%) and easy tasks (97.5%). Three-Hole Plug Insertion is the only task not led by SPA-VLA, where ForceVLA2-π<sub>0.5</sub> reaches 85% compared with 80% for SPA-VLA.</p>
+          <p>Under the same backbone and evaluation protocol, PSA-VLA reaches 110/120 successful trials, compared with 74/120 for π<sub>0.5</sub>, 83/120 for ForceVLA-π<sub>0.5</sub>, and 87/120 for ForceVLA2-π<sub>0.5</sub>. These correspond to gains of <strong>30.0, 22.5, and 19.2 percentage points</strong>, respectively. PSA-VLA achieves the highest success rate on five of the six tasks.</p>
+          <p>The gains remain consistent from hard tasks (92.5% mean) to medium (85.0%) and easy tasks (97.5%). Three-Hole Plug Insertion is the only task not led by PSA-VLA, where ForceVLA2-π<sub>0.5</sub> reaches 85% compared with 80% for PSA-VLA.</p>
         </div>
       </div>
     </section>
@@ -310,7 +310,7 @@
       <div class="section-heading">
         <p class="eyebrow">Matched qualitative comparison</p>
         <h2 id="qualitative-title">Maintaining the insertion axis under contact.</h2>
-        <p>Both policies begin the Three-Hole Plug task with closely matched plug-to-socket alignment. As contact loads build, π<sub>0.5</sub> develops lateral drift and ends off-axis. SPA-VLA preserves axial alignment and directs the applied force vertically downward, completing the insertion.</p>
+        <p>Both policies begin the Three-Hole Plug task with closely matched plug-to-socket alignment. As contact loads build, π<sub>0.5</sub> develops lateral drift and ends off-axis. PSA-VLA preserves axial alignment and directs the applied force vertically downward, completing the insertion.</p>
       </div>
 
       <div class="qualitative-grid">
@@ -328,14 +328,14 @@
 
         <figure class="qualitative-item qualitative-item--ours">
           <header>
-            <div><span>SPA-VLA · Ours</span><h3>Three-Hole Plug Insertion</h3></div>
+            <div><span>PSA-VLA · Ours</span><h3>Three-Hole Plug Insertion</h3></div>
             <strong>Success · Vertical insertion</strong>
           </header>
           <div class="qualitative-video">
-            <video autoplay muted loop playsinline preload="metadata" poster="./assets/task-three-hole-plug.png" aria-label="SPA-VLA Three-Hole Plug rollout with vertical insertion"><source src="./assets/videos/12_three_hole_plug_spa_vla.mp4" type="video/mp4"></video>
-            <span class="media-slot">SPA-VLA MP4 slot</span>
+            <video autoplay muted loop playsinline preload="metadata" poster="./assets/task-three-hole-plug.png" aria-label="PSA-VLA Three-Hole Plug rollout with vertical insertion"><source src="./assets/videos/12_three_hole_plug_spa_vla.mp4" type="video/mp4"></video>
+            <span class="media-slot">PSA-VLA MP4 slot</span>
           </div>
-          <figcaption>SPA-VLA maintains axial alignment, applies a stable downward force, and completes a clean insertion.</figcaption>
+          <figcaption>PSA-VLA maintains axial alignment, applies a stable downward force, and completes a clean insertion.</figcaption>
         </figure>
       </div>
 
@@ -373,7 +373,7 @@
               <td><strong>14/20</strong><span>70%</span></td><td><strong>15/20</strong><span>75%</span></td><td><strong>72.5%</strong><span>mean</span></td>
             </tr>
             <tr class="ablation-ours">
-              <th scope="row">SPA-VLA<small>Full model</small></th>
+              <th scope="row">PSA-VLA<small>Full model</small></th>
               <td><strong>19/20</strong><span>95%</span></td><td><strong>19/20</strong><span>95%</span></td><td><strong>95.0%</strong><span>mean</span></td>
             </tr>
           </tbody>
@@ -384,7 +384,7 @@
     <section class="content-section prediction-section" aria-labelledby="prediction-title">
       <div class="section-heading">
         <p class="eyebrow">Predictive representation</p>
-        <h2 id="prediction-title">What SPA learns before acting.</h2>
+        <h2 id="prediction-title">What PSA learns before acting.</h2>
         <p>Predicted force/torque and joint-effort trajectories follow the measured interaction dynamics across insertion and assembly, providing the physical context used by the action expert.</p>
       </div>
 
@@ -401,9 +401,9 @@
         <p>Venue, paper, code, and model links will be updated when the public release information is confirmed.</p>
       </div>
       <div class="citation-box">
-        <pre id="bibtex"><code>@article{li2026spa,
-  title   = {SPA: Sensorimotor Predictive Augmentation
-             for Vision-Language-Action Models},
+        <pre id="bibtex"><code>@article{li2026psa,
+  title   = {PSA: Predictive Sensorimotor Alignment
+             for Contact-Rich Manipulation},
   author  = {Li, Shengbao and Xu, Peng and Tang, Chao and
              Wang, Jiaheng and Yin, Hong and Weihao and Zhu, Jingxuan and
              Chen, Jiangtao and Li, Tingguang},
@@ -416,7 +416,7 @@
   </main>
 
   <footer>
-    <a href="#top">SPA</a>
+    <a href="#top">PSA</a>
     <p>Project page preview · 2026</p>
   </footer>
 
