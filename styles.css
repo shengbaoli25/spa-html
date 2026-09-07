@@ -577,8 +577,23 @@ a { color: inherit; }
 .ablation-table tbody td { font-family: "Courier New", monospace; }
 .ablation-table tbody td strong { display: block; color: var(--ink); font: 17px/1 Georgia, "Times New Roman", serif; font-weight: 400; }
 .ablation-table tbody td span { display: block; margin-top: 6px; color: var(--muted); font-size: 8px; text-transform: uppercase; }
+.ablation-table tbody td small { display: block; margin-top: 5px; color: var(--muted); font-size: 7px; line-height: 1.4; white-space: nowrap; }
 .ablation-table tbody tr:last-child th,
 .ablation-table tbody tr:last-child td { border-bottom: 0; }
+.ablation-table .ablation-question th {
+  width: auto;
+  height: 35px;
+  padding: 11px 2px 8px;
+  color: var(--ink);
+  background: #f1f2ef;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font: 8px/1.3 "Courier New", monospace;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-align: left;
+  text-transform: uppercase;
+}
 .ablation-table .ablation-control th { color: var(--medium); }
 .ablation-table .ablation-ours { color: var(--accent); background: #fff7f4; }
 .ablation-table .ablation-ours th,
@@ -691,6 +706,48 @@ footer p { margin: 0; color: var(--muted); font: 9px "Courier New", monospace; t
   .ablation-table tbody th small { margin-top: 4px; font-size: 6px; }
   .ablation-table tbody td strong { font-size: 13px; }
   .ablation-table tbody td span { margin-top: 4px; font-size: 6px; }
+  .ablation-table tbody td small { margin-top: 3px; font-size: 5px; white-space: normal; }
+  .ablation-table .ablation-question th { height: 30px; padding: 9px 2px 7px; font-size: 7px; }
+  .ablation-table thead { display: none; }
+  .ablation-table tbody,
+  .ablation-table tbody tr { display: block; }
+  .ablation-table tbody tr:not(.ablation-question) {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 0 0 8px;
+    border-bottom: 1px solid var(--soft-line);
+  }
+  .ablation-table tbody tr:not(.ablation-question) th {
+    width: auto;
+    height: auto;
+    padding: 12px 2px 8px;
+    grid-column: 1 / -1;
+    border-bottom: 0;
+  }
+  .ablation-table tbody tr:not(.ablation-question) td {
+    height: auto;
+    min-height: 69px;
+    padding: 8px 5px 5px;
+    border-top: 1px solid var(--soft-line);
+    border-bottom: 0;
+    text-align: left;
+  }
+  .ablation-table tbody tr:not(.ablation-question) td + td { border-left: 1px solid var(--soft-line); }
+  .ablation-table tbody tr:not(.ablation-question) td::before {
+    display: block;
+    min-height: 17px;
+    margin-bottom: 5px;
+    color: var(--muted);
+    font: 5px/1.25 "Courier New", monospace;
+    text-transform: uppercase;
+  }
+  .ablation-table tbody tr:not(.ablation-question) td:nth-of-type(1)::before { content: "Water-Hose"; }
+  .ablation-table tbody tr:not(.ablation-question) td:nth-of-type(2)::before { content: "Two-Hole Plug"; }
+  .ablation-table tbody tr:not(.ablation-question) td:nth-of-type(3)::before { content: "Average"; }
+  .ablation-table tbody tr:not(.ablation-question) td strong { font-size: 16px; }
+  .ablation-table tbody tr:not(.ablation-question) td span { font-size: 6px; }
+  .ablation-table tbody tr:not(.ablation-question) td small { font-size: 6px; line-height: 1.45; }
+  .ablation-table .ablation-question th { width: auto; }
   .results-chart-viewport { margin-top: 34px; }
   .results-chart { padding: 12px 8px 16px; }
   .results-chart > figcaption { font-size: 7px; }

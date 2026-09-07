@@ -8,9 +8,9 @@ Required filenames:
 03_three_hole_plug.mp4
 04_lego.mp4
 05_two_hole_plug.mp4
-06_board_wipe.mp4
+06_board_wipe.mp4              Blackboard Wiping rollout
 07_water_hose_90min.mp4        9-minute time-compressed version of the full 90-minute / 450-trial session
-08_mortise_tenon_60min.mp4     60-minute / 80-trial continuous stability test
+08_mortise_tenon_60min.mp4     full 50-trial continuous stability test (48/50 successful)
 09_cable_lego_sorting.mp4
 10_long_horizon_servo_packing.mp4
 11_three_hole_plug_pi05.mp4    matched π0.5 rollout with lateral drift
