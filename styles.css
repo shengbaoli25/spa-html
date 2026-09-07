@@ -163,6 +163,23 @@ a { color: inherit; }
   line-height: 1.7;
 }
 
+.task-overview-figure {
+  max-width: 1120px;
+  margin: 48px auto 0;
+  padding: 15px 15px 0;
+  background: var(--white);
+  border-radius: 5px;
+}
+.task-overview-figure img { max-height: 620px; object-fit: contain; }
+.task-overview-figure figcaption {
+  min-height: 42px;
+  padding: 11px 2px 12px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+.task-overview-figure figcaption span { color: var(--ink); font-weight: 700; }
+
 .rollout-showcase {
   width: min(var(--wide), calc(100% - 32px));
   margin: 0 auto;
@@ -349,6 +366,12 @@ a { color: inherit; }
 .wide-figure figcaption { min-height: 49px; padding: 13px 2px; color: var(--muted); font-size: 11px; line-height: 1.5; }
 .wide-figure figcaption span { color: var(--ink); font-weight: 700; }
 .wide-figure--prediction img { max-height: 720px; }
+.wide-figure--ablation img { max-height: 560px; }
+.method-figures { margin-top: 50px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, .36fr); gap: 18px; align-items: start; }
+.method-figures .wide-figure { min-width: 0; margin: 0; padding: 14px 14px 0; }
+.method-figures .wide-figure img { max-height: none; }
+.method-figures .wide-figure figcaption { min-height: 70px; padding: 11px 2px 13px; font-size: 10px; }
+.method-figures .wide-figure--integration { margin-top: 0; }
 
 .method-explanation {
   margin-top: 34px;
@@ -680,6 +703,7 @@ footer p { margin: 0; color: var(--muted); font: 9px "Courier New", monospace; t
   .section-heading h2 { font-size: 34px; }
   .section-heading > p:last-child { font-size: 16px; }
   .difficulty-grid { margin-top: 38px; }
+  .task-overview-figure { margin-top: 38px; padding: 9px 9px 0; }
   .difficulty-header { padding-left: 6px; }
   .task-card figcaption strong { font-size: 15px; }
   .protocol-band { padding: 58px 14px; }
@@ -692,6 +716,8 @@ footer p { margin: 0; color: var(--muted); font: 9px "Courier New", monospace; t
   .endurance-stats p:nth-child(odd) { border-left: 0; }
   .endurance-stats p:nth-child(n + 3) { border-top: 1px solid var(--soft-line); }
   .wide-figure { margin-top: 38px; padding: 9px 9px 0; }
+  .method-figures { margin-top: 38px; grid-template-columns: 1fr; gap: 22px; }
+  .method-figures .wide-figure { padding: 9px 9px 0; }
   .qualitative-grid { margin-top: 38px; }
   .qualitative-item > header { min-height: 0; display: block; }
   .qualitative-item > header strong { display: inline-block; margin-top: 13px; }

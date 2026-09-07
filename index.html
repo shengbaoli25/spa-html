@@ -62,6 +62,11 @@
         <p>The desktop layout reads by column: hard, medium, and easy. Each slot is reserved for a short, muted rollout from the corresponding PSR-VLA evaluation.</p>
       </div>
 
+      <figure class="task-overview-figure">
+        <img src="./assets/fig-intro-overview.png" alt="Overview of PSR-VLA and six real-world contact-rich manipulation tasks" loading="lazy">
+        <figcaption><span>Figure 1.</span> Overview of PSR-VLA and the six real-world tasks spanning insertion, assembly, and wiping.</figcaption>
+      </figure>
+
       <div class="difficulty-grid">
         <section class="difficulty-column difficulty-hard" aria-labelledby="hard-title">
           <header class="difficulty-header">
@@ -222,10 +227,16 @@
         <p>PSR receives compressed multiview visual tokens together with force/torque, joint-state, and joint-effort histories. A six-layer predictive Transformer learns an ordered hierarchy of sensorimotor representations that conditions selected layers of the Action Expert.</p>
       </div>
 
-      <figure class="wide-figure">
-        <img src="./assets/fig-method-overview.png" alt="PSR-VLA model overview">
-        <figcaption><span>Figure 1.</span> PSR learns prediction-supervised sensorimotor representations through multi-target forecasting and integrates them into selected Action Expert layers.</figcaption>
-      </figure>
+      <div class="method-figures">
+        <figure class="wide-figure wide-figure--pretraining">
+          <img src="./assets/fig-psr-pretraining.png" alt="PSR predictive pretraining pipeline">
+          <figcaption><span>Figure 2.</span> PSR learns a sensorimotor representation hierarchy through multi-target forecasting in Stage 1. The shared decoder predicts future joint effort, joint displacement, and force/torque sequences.</figcaption>
+        </figure>
+        <figure class="wide-figure wide-figure--integration">
+          <img src="./assets/fig-psr-integration.png" alt="Depth-aligned PSR-VLA integration into Action Expert layers">
+          <figcaption><span>Figure 3.</span> Depth-aligned integration of PSR representations into selected Action Expert layers through gated cross-attention.</figcaption>
+        </figure>
+      </div>
 
       <div class="method-explanation" aria-label="PSR-VLA training stages">
         <article>
@@ -234,7 +245,7 @@
         </article>
         <article>
           <span>02</span>
-          <div><h3>Sensorimotor representation integration</h3><p>During action learning, the six PSR representations are aligned in depth order with Action Expert layers 3, 6, 9, 12, 15, and 18 through gated cross-attention. The training-only prediction decoder is discarded, while learnable gates regulate each residual sensorimotor update.</p></div>
+          <div><h3>Sensorimotor representation integration</h3><p>During action learning, the six PSR representations are aligned in depth order with Action Expert layers 3, 6, 9, 12, 15, and 18 through gated cross-attention. The prediction decoder is frozen and no prediction loss is applied in Stage 2; learnable gates regulate each residual sensorimotor update.</p></div>
         </article>
       </div>
     </section>
@@ -343,6 +354,19 @@
       <p class="qualitative-note">Representative paired rollouts with comparable initial alignment. This example illustrates contact behavior and is not used to estimate the overall success rate.</p>
     </section>
 
+    <section class="content-section prediction-section" aria-labelledby="prediction-title">
+      <div class="section-heading">
+        <p class="eyebrow">Predictive representation</p>
+        <h2 id="prediction-title">What PSR learns before acting.</h2>
+        <p>On held-out sequences, PSR reduces normalized MSE over a persistence baseline by 54.9% for future force/torque, 48.1% for future joint effort, and 87.5% for terminal joint-state displacement.</p>
+      </div>
+
+      <figure class="wide-figure wide-figure--prediction">
+        <img src="./assets/fig-prediction-trajectories.png" alt="Predicted and measured force, torque, and joint-effort trajectories">
+        <figcaption><span>Figure 4.</span> Stage-1 predictions on held-out offline sequences; displayed channels are selected by event-associated ground-truth variation rather than prediction accuracy.</figcaption>
+      </figure>
+    </section>
+
     <section class="content-section ablation-section" id="ablation" aria-labelledby="ablation-title">
       <div class="section-heading">
         <p class="eyebrow">Ablation studies</p>
@@ -407,18 +431,10 @@
           </tbody>
         </table>
       </div>
-    </section>
 
-    <section class="content-section prediction-section" aria-labelledby="prediction-title">
-      <div class="section-heading">
-        <p class="eyebrow">Predictive representation</p>
-        <h2 id="prediction-title">What PSR learns before acting.</h2>
-        <p>On held-out sequences, PSR reduces normalized MSE over a persistence baseline by 54.9% for future force/torque, 48.1% for future joint effort, and 87.5% for terminal joint-state displacement.</p>
-      </div>
-
-      <figure class="wide-figure wide-figure--prediction">
-        <img src="./assets/fig-prediction-trajectories.png" alt="Predicted and measured force, torque, and joint-effort trajectories">
-        <figcaption><span>Figure 2.</span> Stage-1 predictions on held-out offline sequences; displayed channels are selected by event-associated ground-truth variation rather than prediction accuracy.</figcaption>
+      <figure class="wide-figure wide-figure--ablation">
+        <img src="./assets/fig-ablation-results.jpg" alt="Ablation success counts for Water-Hose and Two-Hole Plug Insertion">
+        <figcaption><span>Figure 5.</span> Ablation success counts on Water-Hose Insertion and Two-Hole Plug Insertion over 20 real-robot trials per task.</figcaption>
       </figure>
     </section>
 

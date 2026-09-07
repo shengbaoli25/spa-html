@@ -6,8 +6,10 @@ original template under `../site/` is unchanged.
 
 The task showcase is organized as a desktop 3-column by 2-row square video
 wall. Each column represents one difficulty level (hard, medium, or easy). The
-page also contains two 16:9 stability tests, two 16:9 supplementary experiments,
-a six-task grouped result chart, one paired Three-Hole Plug comparison, and the ablation table. Expected video filenames and aspect ratios are listed in
+page also contains the latest Overleaf task-overview figure, two 16:9 stability tests,
+two 16:9 supplementary experiments, a six-task grouped result chart, one paired
+Three-Hole Plug comparison, and the ablation table. Expected video filenames and
+aspect ratios are listed in
 `assets/videos/README.txt`.
 
 Run `./serve.ps1` and open
@@ -16,3 +18,7 @@ Run `./serve.ps1` and open
 The site is static and can be deployed directly from this directory. Internal
 MP4 files are ignored by Git by default; publish video assets only after the
 release status is confirmed.
+
+The paper figures in `assets/` were refreshed from the current Overleaf project
+source downloaded on 2026-09-07. The page follows the paper's Figure 1–5 order,
+including separate predictive-pretraining and PSR-VLA-integration method figures.
